@@ -204,3 +204,4 @@ _dependentPackages/
 
 # Visual Studio Code
 .vscode/
+/core/extensions/COMServerDemo.zip

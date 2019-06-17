@@ -102,7 +102,8 @@
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\MyProj\Core3\src\samples\core\extensions\COMServerDemo\COMServerNetPIA\bin\Debug;$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/VERBOSE %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -174,8 +175,17 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\COMContract\COMContract.csproj">
+      <Project>{21bb54ea-49cc-458e-85a1-c3f4216ae39a}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\COMServerNetPIA\COMServerNetPIA.csproj">
       <Project>{a513193f-5565-465d-bf56-2fd38b6b9ccd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\COMServerPIA\COMServerPIA.csproj">
+      <Project>{e68f2114-0805-4854-888d-89cc7bd71867}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\COMServer\COMServer.csproj">
+      <Project>{023f1005-290e-4886-8248-44598e789353}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
